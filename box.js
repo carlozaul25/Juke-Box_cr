@@ -2,12 +2,19 @@
 var musicPlayer ={
  currentSong: 0,
 	songs: ['dayNnite','lazySong','mirrors','yeah'],
-	songsInfo: {"Day N Nite": 'Kid Kudi', "The Lazy song": 'Bruno Mars',"Mirrors":"Justin Timberlake","Yeah!":"Usher"},
+	songsInfo: {"Day N Nite": 'Kid Kudi', "The lazy song": 'Bruno Mars',"Mirrors":"Justin Timberlake","Yeah!":"Usher"},
+	currentImage: 0,
+	// songsImg: ['dayniteImg','lazyImg','mirrorsImg','yeahImg'],
+
 	play: function() {
 		document.getElementById(this.songs[this.currentSong]).play();
 		var showSong= Object.keys(this.songsInfo)[this.currentSong];
 		$('#songTitle').text(showSong);
 		$('#artists').text(this.songsInfo[showSong]);
+		$("img[src='song-images/daynite.jpg']").hide();
+		$("img[src='song-images/lazysong.jpg']").hide();
+		$("img[src='song-images/mirrors.jpg']").hide();
+		$("img[src='song-images/Confessions.jpg']").hide();
 	},
 	pause: function() {
 		document.getElementById(this.songs[this.currentSong]).pause();
@@ -67,30 +74,4 @@ var musicPlayer ={
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function Jukebox(){
-
-// 	this.play = function() {
-// 		console.log('hi')
-// 	}
-// }
-
-// var a  = new Jukebox()
 

@@ -1,14 +1,20 @@
 .wrapper {
-	width: 200px;
-	height: 300px;
+	width: 250px;
+	height: 450px;
 	border: 2px solid;
 	text-align: center;
+	border-radius: 20px;
 	position: fixed; 
  	 top: 10%;
   	left: 40%;
+
 }
 
 .buttons {
 	position: relative;
 	top: 150px;
+}
+
+.images {
+	display: none;
 }
