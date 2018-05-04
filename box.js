@@ -1,20 +1,21 @@
 
+var imageContainer = document.getElementById('imageContainer')
+imageContainer.style.backgroundImage = "url(" +  + ")"
+
+
 var musicPlayer ={
  currentSong: 0,
 	songs: ['dayNnite','lazySong','mirrors','yeah'],
 	songsInfo: {"Day N Nite": 'Kid Kudi', "The lazy song": 'Bruno Mars',"Mirrors":"Justin Timberlake","Yeah!":"Usher"},
 	currentImage: 0,
-	// songsImg: ['dayniteImg','lazyImg','mirrorsImg','yeahImg'],
+	songsImg:{'Day N Nite': 'song-images/daynite.jpg', 'The lazy song':'song-images/lazysong.jpg', 'Mirrors':'song-images/mirrors.jpg','Yeah':'song-images/Confessions.jpg'},
 
 	play: function() {
 		document.getElementById(this.songs[this.currentSong]).play();
 		var showSong= Object.keys(this.songsInfo)[this.currentSong];
 		$('#songTitle').text(showSong);
 		$('#artists').text(this.songsInfo[showSong]);
-		$("img[src='song-images/daynite.jpg']").hide();
-		$("img[src='song-images/lazysong.jpg']").hide();
-		$("img[src='song-images/mirrors.jpg']").hide();
-		$("img[src='song-images/Confessions.jpg']").hide();
+		
 	},
 	pause: function() {
 		document.getElementById(this.songs[this.currentSong]).pause();
