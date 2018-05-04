@@ -3,6 +3,7 @@
 <head>
 	<title>JukeBox</title>
 	<link rel="stylesheet" type="text/css" href="box.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -14,12 +15,12 @@
 	<p id='artists'></p>
 
 		<div class='buttons'> 
-		<button id='play'>play</button>
-		<button id='pause'>pause</button>
-		<button id='next'>next</button>
+		<button id='pause'><i class="fa fa-pause" style="font-size:36px;color:black"></i></button>
+		<button id='play'><i class="fa fa-play" style="font-size:50px;color:black"></i></button>
+		<button id='next'><i class="fa fa-step-forward" style="font-size:36px;color:black"></i></button>
 		</div>
 	
-		<audio id='dayNnite' class="song" src="songs/Day_n_Nite.m4a" img src="daynite.jpg"></audio>
+		<audio id='dayNnite' class="song" src="songs/Day_n_Nite.m4a"></audio>
 		<audio id='lazySong' class="song" src="songs/Lazy_Song.m4a"></audio>
 		<audio id='mirrors' class="song" src="songs/mirrors.m4a"></audio>
 		<audio id='yeah' class="song" src="songs/yeah.m4a"></audio>

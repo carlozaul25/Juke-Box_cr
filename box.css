@@ -1,18 +1,23 @@
+body {
+	background-image: url(songImages/ocean.jpg);
+}
 .wrapper {
 	width: 250px;
 	height: 450px;
-	border: 2px solid;
 	text-align: center;
 	border-radius: 20px;
 	position: fixed; 
  	 top: 10%;
   	left: 40%;
-
+  	background-color:#434343;
+  	/*border: 2px blue;*/
+  	color: white;
+  	box-shadow: 5px 7px black;
 }
 
 .buttons {
 	position: relative;
-	top: 50px;
+	top: 30px;
 }
 
 .images {
@@ -22,7 +27,8 @@
 #imageContainer {
 	width: 200px;
 	height: 200px;
-	border: 2px solid red;
+	border: 2px solid black;
+	border-width: thick;
 	margin: 0 auto;
 	display: none;
 	background-repeat: no-repeat;
