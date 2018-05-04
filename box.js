@@ -1,21 +1,27 @@
 
-var imageContainer = document.getElementById('imageContainer')
-imageContainer.style.backgroundImage = "url(" +  + ")"
 
+	var imageContainer = document.getElementById('imageContainer')
+	// imageContainer.style.backgroundImage = "url(" +  + ")"
 
-var musicPlayer ={
- currentSong: 0,
+	var musicPlayer = {
+ 	currentSong: 0,
 	songs: ['dayNnite','lazySong','mirrors','yeah'],
 	songsInfo: {"Day N Nite": 'Kid Kudi', "The lazy song": 'Bruno Mars',"Mirrors":"Justin Timberlake","Yeah!":"Usher"},
 	currentImage: 0,
-	songsImg:{'Day N Nite': 'song-images/daynite.jpg', 'The lazy song':'song-images/lazysong.jpg', 'Mirrors':'song-images/mirrors.jpg','Yeah':'song-images/Confessions.jpg'},
-
+	// songsImg: [{'Day N Nite': 'song-images/daynite.jpg', 'The lazy song':'song-images/lazysong.jpg', 'Mirrors':'song-images/mirrors.jpg','Yeah':'song-images/Confessions.jpg'}],
+	songsImg: ["songImages/daynite.jpg", "songImages/lazysong.jpg","songImages/mirrors.jpg","songImages/Confessions.jpg"],
 	play: function() {
 		document.getElementById(this.songs[this.currentSong]).play();
 		var showSong= Object.keys(this.songsInfo)[this.currentSong];
 		$('#songTitle').text(showSong);
 		$('#artists').text(this.songsInfo[showSong]);
-		
+			imageContainer.style.display = "block"
+			// imageContainer.style.width= '50px'
+			imageContainer.style.backgroundImage = "url("+ this.songsImg[0]  + ")"
+			imageContainer.style.backgroundImage = "url("+ this.songsImg[0]  + ")"
+			imageContainer.style.backgroundImage = "url("+ this.songsImg[0]  + ")"
+			imageContainer.style.backgroundImage = "url("+ this.songsImg[0]  + ")"
+
 	},
 	pause: function() {
 		document.getElementById(this.songs[this.currentSong]).pause();
@@ -25,6 +31,7 @@ var musicPlayer ={
 		document.getElementById(this.songs[this.currentSong]).currentTime=0;
 		if(this.currentSong < (this.songs.length -1)){
 			this.currentSong = this.currentSong +1;
+
 		}else{
 			this.currentSong = 0;
 		};
@@ -59,10 +66,7 @@ var musicPlayer ={
 
 
 
-
-
-
-
+console.log(musicPlayer.songsImg[0])
 
 
 

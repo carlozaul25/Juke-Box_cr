@@ -12,9 +12,19 @@
 
 .buttons {
 	position: relative;
-	top: 150px;
+	top: 50px;
 }
 
 .images {
 	display: none;
+}
+
+#imageContainer {
+	width: 200px;
+	height: 200px;
+	border: 2px solid red;
+	margin: 0 auto;
+	display: none;
+	background-repeat: no-repeat;
+
 }
