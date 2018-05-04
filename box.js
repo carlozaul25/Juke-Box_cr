@@ -12,19 +12,6 @@ var musicPlayer ={
 	pause: function() {
 		document.getElementById(this.songs[this.currentSong]).pause();
 	},
-	prev: function() {
-		this.pause();
-		document.getElementById(this.songs[this.currentSong]).currentTime=0;
-		if(this.currentSong > 0 ){
-			this.currentSong = this.currentSong -1;
-		}else{
-			this.currentSong = 1
-		};
-		document.getElementById(this.songs[this.currentSong]).play();
-		var showSong= Object.keys(this.songsInfo)[this.currentSong];
-		$('#songTitle').text(showSong);
-		$('#artists').text(this.songsInfo[showSong]);
-	},
 	next: function() {
 		this.pause();
 		document.getElementById(this.songs[this.currentSong]).currentTime=0;
