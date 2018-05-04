@@ -1,0 +1,14 @@
+.wrapper {
+	width: 200px;
+	height: 300px;
+	border: 2px solid;
+	text-align: center;
+	position: fixed; 
+ 	 top: 10%;
+  	left: 40%;
+}
+
+.buttons {
+	position: relative;
+	top: 150px;
+}
